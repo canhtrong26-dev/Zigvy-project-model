@@ -5,6 +5,7 @@ const userModel = require("./app/models/userModel");
 const postModel = require("./app/models/postModel");
 const commentModel = require("./app/models/commentModel");
 const userRoutes = require("./app/routes/userRoutes");
+const postRoutes = require("./app/routes/postRoutes");
 
 const app = express();
 
@@ -25,6 +26,7 @@ app.get("/", (request, response) => {
 });
 
 app.use("/", userRoutes);
+app.use("/", postRoutes);
 
 app.listen(port, () => {
     console.log("App listening on port " + port);

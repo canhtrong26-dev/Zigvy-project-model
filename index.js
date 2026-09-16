@@ -7,6 +7,9 @@ const commentModel = require("./app/models/commentModel");
 const userRoutes = require("./app/routes/userRoutes");
 const postRoutes = require("./app/routes/postRoutes");
 const commentRoutes = require("./app/routes/commentRoutes");
+const albumModel = require("./app/models/albumModel");
+const photoModel = require("./app/models/photoModel");
+const todoModel = require("./app/models/todoModel");
 
 const app = express();
 

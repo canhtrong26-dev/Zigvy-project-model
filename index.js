@@ -6,10 +6,12 @@ const postModel = require("./app/models/postModel");
 const commentModel = require("./app/models/commentModel");
 const userRoutes = require("./app/routes/userRoutes");
 const postRoutes = require("./app/routes/postRoutes");
+const commentRoutes = require("./app/routes/commentRoutes");
 
 const app = express();
 
 app.use(express.json());
+app.use("/", commentRoutes);
 app.use(express.urlencoded({ extended: true }));
 
 const port = 8000;

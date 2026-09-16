@@ -1,6 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
+const userModel = require("./app/models/userModel");
+const postModel = require("./app/models/postModel");
+const commentModel = require("./app/models/commentModel");
+const userRoutes = require("./app/routes/userRoutes");
+
 const app = express();
 
 app.use(express.json());
@@ -18,6 +23,8 @@ app.get("/", (request, response) => {
         message: `Xin chào, hôm nay là ngày ${today.getDate()} tháng ${today.getMonth() + 1} năm ${today.getFullYear()}`
     });
 });
+
+app.use("/", userRoutes);
 
 app.listen(port, () => {
     console.log("App listening on port " + port);

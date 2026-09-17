@@ -13,6 +13,8 @@ const postRoutes = require("./app/routes/postRoutes");
 const commentRoutes = require("./app/routes/commentRoutes");
 const albumRoutes = require("./app/routes/albumRoutes");
 const photoRoutes = require("./app/routes/photoRoutes");
+const todoRoutes = require("./app/routes/todoRoutes");
+
 
 const app = express();
 
@@ -38,6 +40,7 @@ app.use("/", postRoutes);
 app.use("/", commentRoutes);
 app.use("/", albumRoutes);
 app.use("/", photoRoutes);
+app.use("/", todoRoutes);
 
 app.listen(port, () => {
     console.log("App listening on port " + port);
